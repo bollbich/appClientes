@@ -1,0 +1,30 @@
+<div class="card bg-dark text-white">
+  <div class="card-header">
+    Acceso para usuarios
+  </div>
+  <div class="card-body">
+  <form (ngSubmit)="Acceder()" method="post">
+    <div class="form-group row">
+      <label for="nombre" class="col-form-label col-sm-2">Username</label>
+      <div class="col-sm-6">
+        <input type="text" name="usuario" [(ngModel)]="usuario.username" class="form-control" placeholder="Ingrese el nombre de usuario" required="true">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="nombre" class="col-form-label col-sm-2">Password</label>
+      <div class="col-sm-6 mt-2">
+        <input type="password" name="Password" [(ngModel)]="usuario.password" class="form-control" placeholder="Ingrese el password" required="true">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <div class="col-sm-6">
+        <button class="btn btn-primary">Acceder</button>
+      </div>
+    </div>
+
+  </form>
+
+  </div>
+</div>

@@ -1,0 +1,51 @@
+<div class="card bg-dark text-white">
+  <div class="card-header">
+    {{titulo}}
+  </div>
+  <div class="card-body">
+  <form (ngSubmit)="create()" method="post">
+    <div class="form-group row">
+      <label for="nombre" class="col-form-label col-sm-2">Nombre</label>
+      <div class="col-sm-6">
+        <input type="text" name="nombre" [(ngModel)]="cliente.nombre" class="form-control" placeholder="Ingrese un nombre" required="true">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="nombre" class="col-form-label col-sm-2">Apellido</label>
+      <div class="col-sm-6">
+        <input type="text" name="apellido" [(ngModel)]="cliente.apellido" class="form-control" placeholder="Ingrese un apellido" required="true">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="nombre" class="col-form-label col-sm-2">Email</label>
+      <div class="col-sm-6">
+        <input type="email" name="email" [(ngModel)]="cliente.email" class="form-control" placeholder="Ingrese un email" required="true">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="nombre" class="col-form-label col-sm-2">Telefono</label>
+      <div class="col-sm-6">
+        <input type="number" name="telefono" [(ngModel)]="cliente.telefono" class="form-control" placeholder="Ingrese un telefono" required="true">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="nombre" class="col-form-label col-sm-2">Fecha</label>
+      <div class="col-sm-6">
+        <input type="date" name="createdAt" [(ngModel)]="cliente.createdAt" class="form-control" required="true">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <div class="col-sm-6">
+        <button class="btn btn-primary">Crear</button>
+      </div>
+    </div>
+
+  </form>
+
+  </div>
+</div>
