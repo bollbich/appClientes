@@ -20,7 +20,15 @@ const routes: Routes = [
     component:FormComponent
   },
   {
+    path:'clientes/editar/:id',
+    component:FormComponent
+  },
+  {
     path:'clientes/ver',
+    component:DetalleComponent
+  },
+  {
+    path:'clientes/ver/:id',
     component:DetalleComponent
   },
   {

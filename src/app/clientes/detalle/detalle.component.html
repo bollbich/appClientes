@@ -1,1 +1,35 @@
-<p>detalle works!</p>
+<div class="card bg-card text-dark">
+  <div class="card-header">Detalle cliente</div>
+  <div class="Container">
+    <div class="row">
+      <div class="col-sm">
+        <ul class="list-group text-dark mb-3">
+
+          <li class="list-group">
+            <div class="col-sm">
+              <img src="assets/userDefault.png" class="img-thumbnail row" style="width: 64px;">
+
+            </div>
+          </li>
+          <li class="list-group">Nombre: {{cliente.nombre}}</li>
+          <li class="list-group">Apellidos: {{cliente.apellido}}</li>
+          <li class="list-group">Email: {{cliente.email}}</li>
+          <li class="list-group">Telefono: {{cliente.telefono}}</li>
+          <li class="list-group">Imagen: {{cliente.imagen}}</li>
+        </ul>
+
+        <div class="input-group">
+          <dir class="custom-file">
+            <input type="file" class="custom-file-input" id="inputImg" (change)="seleccionarImagen($event)">
+            <label for="inputImg" class="custom.file-label">Buscar imagen</label>
+          </dir>
+          <div class="input-group-append">
+            <button class="btn btn-outline-info">Guardar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

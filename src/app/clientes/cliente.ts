@@ -11,4 +11,6 @@ export class Cliente{
 	 telefono!:number;
 
 	 createdAt!:string;
+
+   imagen!:string;
 }

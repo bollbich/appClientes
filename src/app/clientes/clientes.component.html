@@ -12,26 +12,30 @@
       <thead>
         <tr>
           <th scope="col">#</th>
+          <th scope="col">Imagen</th>
           <th scope="col">Nombre</th>
           <th scope="col">Apellido</th>
           <th scope="col">Email</th>
           <th scope="col">Telefono</th>
           <th scope="col">Fecha</th>
-          <th scope="col">Acciones</th>
+          <th scope="col" *ngIf="this.authService.token">Acciones</th>
         </tr>
       </thead>
       <tbody>
         <tr *ngFor="let item of clientes">
           <th scope="row">{{item.id}}</th>
+          <th>
+            <img src="{{imagenSrc}}" alt="sin imagen" class="img-thumbnail rounded" style="width: 64px;">
+          </th>
           <td>{{item.nombre}}</td>
           <td>{{item.apellido}}</td>
           <td>{{item.email}}</td>
           <td>{{item.telefono}}</td>
           <td>{{item.createdAt}}</td>
-      <td>
-        <button class="btn btn.rounded btn-info btn-sm m-2" type="button" [routerLink]="['/clientes/ver']">Ver</button>
-        <button class="btn btn.rounded btn-primary btn-sm m-2" type="button" [routerLink]="['/clientes/crear']">editar</button>
-        <button class="btn btn.rounded btn-danger btn-sm m-2" type="button" (click)="delete()">Eliminar</button>
+      <td *ngIf="this.authService.token">
+        <button class="btn btn.rounded btn-info btn-sm m-2" type="button" [routerLink]="['/clientes/ver',item.id]">Ver</button>
+        <button class="btn btn.rounded btn-primary btn-sm m-2" type="button" [routerLink]="['/clientes/editar',item.id]">editar</button>
+        <button class="btn btn.rounded btn-danger btn-sm m-2" type="button" (click)="delete(item)">Eliminar</button>
       </td>
         </tr>
       </tbody>
